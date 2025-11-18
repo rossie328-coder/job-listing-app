@@ -1,0 +1,150 @@
+openapi: 3.0.0
+info:
+  title: Offerte API
+  version: 1.0.0
+  description: API per gestire offerte di lavoro.
+servers:
+  - url: http://localhost:3000
+    description: Server locale
+
+paths:
+  /api/Offerte:
+    get:
+      summary: Recupera tutte le offerte
+      responses:
+        '200':
+          description: Lista di tutte le offerte
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: ID dell'offerta
+                    nome:
+                      type: string
+                      description: Nome dell'offerta
+                    azienda:
+                      type: string
+                      description: Azienda che offre il lavoro
+                    luogo:
+                      type: string
+                      description: Luogo del lavoro
+                    descrizione:
+                      type: string
+                      description: Descrizione dell'offerta
+        '500':
+          description: Errore durante il recupero delle offerte
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+                    description: Messaggio di errore
+
+  /api/Offerte/{numero}:
+    get:
+      summary: Recupera una singola offerta
+      parameters:
+        - in: path
+          name: numero
+          schema:
+            type: integer
+          required: true
+          description: Numero ID dell'offerta da recuperare
+      responses:
+        '200':
+          description: Dettagli dell'offerta
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: ID dell'offerta
+                  nome:
+                    type: string
+                    description: Nome dell'offerta
+                  azienda:
+                    type: string
+                    description: Azienda che offre il lavoro
+                  luogo:
+                    type: string
+                    description: Luogo del lavoro
+                  descrizione:
+                    type: string
+                    description: Descrizione dell'offerta
+        '404':
+          description: Offerta non trovata
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+                    description: Messaggio di errore
+
+  /create-offer:
+    post:
+      summary: Crea una nuova offerta
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  description: Nome dell'offerta
+                azienda:
+                  type: string
+                  description: Azienda che offre il lavoro
+                luogo:
+                  type: string
+                  description: Luogo del lavoro
+                descrizione:
+                  type: string
+                  description: Descrizione dell'offerta
+              required:
+                - nome
+                - azienda
+                - luogo
+                - descrizione
+      responses:
+        '201':
+          description: Offerta creata con successo
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Offers created successfully
+        '422':
+          description: Errore di validazione dei dati inviati
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        msg:
+                          type: string
+                          description: Messaggio di errore
+        '500':
+          description: Errore nella creazione dell'offerta
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Error in offer creation

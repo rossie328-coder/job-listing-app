@@ -1,0 +1,261 @@
+
+  header {
+    text-align: center;
+    background-color: rgb(0, 70, 140);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    body {
+      display: none; 
+    }
+  }
+
+  #title-btn {
+    background-color:  rgb(0, 70, 140); 
+  }
+
+  #site-name {
+    margin-top: 4%; 
+    font-size: 200%;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(255, 140, 0)   
+  }
+
+  #navbar {
+    padding: 1%;
+    background-color: rgb(56, 54, 54);
+    color: white;
+    display: flex;  
+    align-items: center; 
+    vertical-align: center;
+    justify-content: space-between; 
+  }
+
+  #search-bar {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+
+  #auth {
+    margin-right: 5%;
+    display: flex; 
+    list-style-type: none; 
+  }
+
+  #navbar > span {
+    margin: 1em;
+  }
+  
+  aside {
+    padding: 2%;
+    float: right;
+    clear: left;
+    width: 35%; 
+    margin:3%;
+  }
+  
+  main {
+    float: left;  
+    width: 25%;
+    padding: 2%;
+    margin: 3%;
+    width: 45%; 
+  }
+  
+  footer {
+    background-color: rgb(56, 54, 54);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+    text-align: center;
+    clear: both;
+  }
+
+  .detail, .job {
+    border: 2px solid rgb(56, 54, 54); 
+    border-radius: 1em;
+    border-width: 0.2em;
+    padding: 2em;
+    margin: 1em 0;
+    background-color: rgb(252, 254, 255); 
+    box-shadow: 10px 10px 8px 10px #888888;
+  }
+
+  .formTitle {
+    text-align: center; 
+    font-weight: bold;
+  }
+
+  .authForm {
+    width: 40%; 
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: rgb(0, 70, 140);
+    padding: 2%;
+    color: white; 
+    position: relative; 
+    left: 50%;  
+  }
+
+  .authFormAgency {
+    width: 40%; 
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: rgb(255, 140, 0); 
+    padding: 2%;
+    color: white; 
+    position: center; 
+    left: 50%;  
+  }
+
+  #container {
+    flex: 1
+  }
+
+  #btn-nav {
+    color: yellow; 
+    background-color: green;
+  }
+
+
+  #auth-aziende {
+    background-color: rgb(255, 140, 0); 
+    border: 1px solid black; 
+    border-radius: 20%; 
+  }
+
+  #auth-candidati {
+    background-color: white; 
+    border: 1px solid black; 
+    border-radius:20%; 
+  }
+
+  #btn-primary {
+    background-color: rgb(255, 140, 0);
+    color: black; 
+  }
+  
+  #button-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    list-style-type: none;
+    padding: 2%;
+  }
+
+  .nav-btn {
+    border: 1px solid black; 
+    border-radius: 20%; 
+    background-color: rgb(255, 140, 0);
+    font-weight: bold;
+    margin-left: 2%; 
+    margin-right: 2%;
+  }
+
+ #section-annunci {
+  padding: 5%;
+  margin: 5%; 
+  position: relative; 
+  bottom: 15%; 
+  text-align: center; 
+  align-items: center;
+ }
+
+ body {
+  background-color:  rgb(230, 245, 255) !important;
+  display: flex; 
+  flex-direction: column;
+  min-height: 100vh;
+ }
+
+ #annunci-btn, #cv-btn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black; 
+  border-radius:20%; 
+  background-color: rgb(255, 140, 0); 
+ }
+
+ #authFormId {
+  margin: 0 auto; 
+ }
+
+ #offcanvasRight {
+  background-color: rgb(230, 245, 255);
+ }
+
+ .offcanvas-body > ul {
+  list-style-type: none; 
+ }
+
+ .offcanvas-body > ul > li > button {
+  border-radius:20%; 
+  background-color: rgb(255, 140, 0); 
+  margin-top: 2%; 
+  margin-bottom: 2%; 
+ }
+
+ .nav-btn:disabled {
+  color: black; 
+ }
+
+ .job-title {
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  font-size: 20px; 
+ }
+
+ .job-description {
+  color: rgb(56, 54, 54)
+ }
+
+ .job-button {
+  color: white; 
+  background-color: rgb(0, 70, 140); 
+  border: 1px solid black; 
+  border-radius:12%; 
+ }
+
+ #profile-title {
+  font-weight: bold; 
+ }
+
+ ul {
+  list-style-type: none; 
+ }
+
+ #login-text {
+  font-weight: bold;
+  font-size: 20pt; 
+  vertical-align: center; 
+ }
+
+ #accordion-button-0, #accordion-button-1, #accordion-button-2{
+  font-weight: bold; 
+ }
+
+ .accordion-header > button {
+  background-color: rgb(0, 70, 140);
+ }
+
+ #circle {
+  width: 12px;
+  height: 12px;
+ }
+
+ #containerId {
+  border: 2px solid rgb(56, 54, 54);
+  border-radius: 1em;
+  border-width: 0.2em;
+  background-color: rgb(252, 254, 255); 
+  box-shadow: 10px 10px 8px 10px #888888;
+ }
+
+ .offcanvas-body {
+  border: 2px solid rgb(56, 54, 54);
+  border-width: 0.2em;
+ }
+
+ 
